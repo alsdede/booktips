@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback,  } from 'react';
+import {  View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import Entypo from '@expo/vector-icons/Entypo';
 import * as SplashScreen from 'expo-splash-screen';
-import * as Font from 'expo-font';
+
 import {
   useFonts,
   Inter_900Black,
@@ -11,7 +11,7 @@ import {
   Inter_700Bold,
 
 } from '@expo-google-fonts/inter';
-import {  View } from 'react-native';
+
 import {Text} from './src/components/Text';
 
 SplashScreen.preventAutoHideAsync();
