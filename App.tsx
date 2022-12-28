@@ -1,6 +1,7 @@
+
 import React, { useCallback,  } from 'react';
-import {  View } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
+
+import { SafeAreaProvider,initialWindowMetrics } from 'react-native-safe-area-context';
 import * as SplashScreen from 'expo-splash-screen';
 
 import {
@@ -11,8 +12,10 @@ import {
   Inter_700Bold,
 
 } from '@expo-google-fonts/inter';
+import Navigation from './src/navigation';
 
-import {Text} from './src/components/Text';
+
+
 
 SplashScreen.preventAutoHideAsync();
 
@@ -34,10 +37,9 @@ export default function App() {
     return null;
   }
   return (
-    <View  style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
-      onLayout={onLayoutRootView}>
-      <Text weight='400' size={40}>Teste</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <Navigation />
+    </SafeAreaProvider>
+
   );
 }
